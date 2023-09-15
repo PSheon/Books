@@ -4,17 +4,23 @@ import React from "react";
 // ** Nextra Imports
 import { DocsThemeConfig } from "nextra-theme-docs";
 
+// ** Components Imports
+import Head from "./src/components/head";
+import Logo from "./src/components/logo";
+import Footer from "./src/components/footer";
+
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  docsRepositoryBase: "https://github.com/shuding/nextra-docs-template",
+  useNextSeoProps: () => ({
+    titleTemplate: "China Books - %s",
+  }),
+  head: <Head />,
+  logo: <Logo />,
   project: {
     link: "https://github.com/shuding/nextra-docs-template",
   },
-  chat: {
-    link: "https://discord.com",
-  },
-  docsRepositoryBase: "https://github.com/shuding/nextra-docs-template",
   footer: {
-    text: "Nextra Docs Template",
+    component: <Footer />,
   },
 };
 
