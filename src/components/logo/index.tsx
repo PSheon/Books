@@ -5,7 +5,7 @@ import { Fragment } from "react";
 import Image from "next/image";
 
 // ** Assets
-import LogoImg from "src/assets/images/logos/logo.png";
+import LogoImg from "src/assets/images/logos/logo.webp";
 
 function Logo() {
   return (

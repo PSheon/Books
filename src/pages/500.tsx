@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // ** Assets
-import CuteFaceImg from "src/assets/images/pages/error/cute-face.png";
+import CuteFaceImg from "src/assets/images/pages/error/cute-face.webp";
 
 const Error500 = () => {
   return (
