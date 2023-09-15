@@ -1,7 +1,7 @@
 {
-  "name": "china-books",
+  "name": "oriental-books",
   "version": "0.0.1",
-  "description": "Collection of china books",
+  "description": "Collection of oriental books",
   "scripts": {
     "dev": "PORT=8080 next dev",
     "build": "next build",
