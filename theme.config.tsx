@@ -12,7 +12,7 @@ import Footer from "./src/components/footer";
 const config: DocsThemeConfig = {
   docsRepositoryBase: "https://github.com/shuding/nextra-docs-template",
   useNextSeoProps: () => ({
-    titleTemplate: "China Books - %s",
+    titleTemplate: "Oriental Books - %s",
   }),
   head: <Head />,
   logo: <Logo />,
