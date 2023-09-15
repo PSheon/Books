@@ -12,7 +12,7 @@ function Logo() {
     <Fragment>
       <Image src={LogoImg} alt="logo" width={24} height={24} />
 
-      <span className="ml-4 font-bold">China Books</span>
+      <span className="ml-4 font-bold">Oriental Books</span>
     </Fragment>
   );
 }
