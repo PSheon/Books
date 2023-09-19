@@ -17,6 +17,8 @@
     "url": "https://github.com/PSheon/Books/issues"
   },
   "dependencies": {
+    "axios": "^1.5.0",
+    "cheerio": "^1.0.0-rc.12",
     "next": "^13.0.6",
     "nextra": "latest",
     "nextra-theme-docs": "latest",
