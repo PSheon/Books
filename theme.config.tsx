@@ -1,18 +1,38 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+// ** React Imports
+import React from "react";
+
+// ** Nextra Imports
+import { DocsThemeConfig } from "nextra-theme-docs";
+
+// ** Components Imports
+import Head from "./src/components/head";
+import Logo from "./src/components/logo";
+import Volume from "./src/components/nav/volume";
+import Chapter from "./src/components/nav/chapter";
+import Footer from "./src/components/footer";
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  docsRepositoryBase: "https://github.com/PSheon/Books",
+  useNextSeoProps: () => ({
+    titleTemplate: "Oriental Books - %s",
+  }),
+  head: <Head />,
+  logo: <Logo />,
+  sidebar: {
+    titleComponent({ title, type }) {
+      const checker = new RegExp(/《.*》/, "g");
+      if (type === "doc" && checker.test(title)) {
+        return <Chapter title={title} />;
+      }
+      return <Volume title={title} />;
+    },
+  },
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: "https://github.com/PSheon/Books",
   },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   footer: {
-    text: 'Nextra Docs Template',
+    component: <Footer />,
   },
-}
+};
 
-export default config
+export default config;
