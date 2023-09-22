@@ -10,5 +10,8 @@
   "volume-09": "卷九",
   "volume-10": "卷十",
   "volume-11": "卷十一",
-  "volume-12": "卷十二"
+  "volume-12": "卷十二",
+  "utils": {
+    "display": "hidden"
+  }
 }
