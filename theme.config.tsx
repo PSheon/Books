@@ -10,6 +10,7 @@ import Logo from "./src/components/logo";
 import Book from "./src/components/nav/book";
 import Volume from "./src/components/nav/volume";
 import Chapter from "./src/components/nav/chapter";
+import Simple from "./src/components/nav/simple";
 import Footer from "./src/components/footer";
 
 const config: DocsThemeConfig = {
@@ -30,8 +31,9 @@ const config: DocsThemeConfig = {
         return <Volume title={title} />;
       } else if (type === "doc" && documentChecker.test(title)) {
         return <Chapter title={title} />;
+      } else {
+        return <Simple title={title} />;
       }
-      return title;
     },
   },
   project: {
