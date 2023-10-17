@@ -7,6 +7,7 @@ import { DocsThemeConfig } from "nextra-theme-docs";
 // ** Components Imports
 import Head from "./src/components/head";
 import Logo from "./src/components/logo";
+import Book from "./src/components/nav/book";
 import Volume from "./src/components/nav/volume";
 import Chapter from "./src/components/nav/chapter";
 import Footer from "./src/components/footer";
@@ -20,11 +21,17 @@ const config: DocsThemeConfig = {
   logo: <Logo />,
   sidebar: {
     titleComponent({ title, type }) {
-      const checker = new RegExp(/《.*》/, "g");
-      if (type === "doc" && checker.test(title)) {
+      const bookChecker = new RegExp(/『.*』/, "g");
+      const volumeChecker = new RegExp(/「.*」/, "g");
+      const documentChecker = new RegExp(/《.*》/, "g");
+      if (type === "doc" && bookChecker.test(title)) {
+        return <Book title={title} />;
+      } else if (type === "doc" && volumeChecker.test(title)) {
+        return <Volume title={title} />;
+      } else if (type === "doc" && documentChecker.test(title)) {
         return <Chapter title={title} />;
       }
-      return <Volume title={title} />;
+      return title;
     },
   },
   project: {
