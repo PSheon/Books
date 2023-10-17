@@ -11,7 +11,7 @@ function Volume(props: Props) {
 
   return (
     <span>
-      <span style={{ paddingRight: "12px" }}>📙</span>
+      <span style={{ paddingRight: "12px" }}>🔖</span>
       <span>{enhancedTitle}</span>
     </span>
   );
