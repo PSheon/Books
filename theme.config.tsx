@@ -21,6 +21,8 @@ const config: DocsThemeConfig = {
   head: <Head />,
   logo: <Logo />,
   sidebar: {
+    defaultMenuCollapseLevel: 1,
+    autoCollapse: true,
     titleComponent({ title, type }) {
       const bookChecker = new RegExp(/『.*』/, "g");
       const volumeChecker = new RegExp(/「.*」/, "g");
