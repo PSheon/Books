@@ -14,7 +14,7 @@ function Head() {
       />
       <meta name="keywords" content="ancient texts, books, collection" />
       <meta name="robots" content="index, follow" />
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="author" content="PSheon" />
 
       {/* Open Graph / Facebook */}
@@ -39,6 +39,9 @@ function Head() {
         content="The collection here comprises a variety of fascinating ancient texts, including original content and translations"
       />
       <meta property="twitter:image" content="/seo/banner.webp" />
+
+      {/* Favicon */}
+      <link rel="manifest" href="/manifest.webmanifest" />
     </Fragment>
   );
 }
